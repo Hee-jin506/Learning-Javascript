@@ -1,4 +1,20 @@
 $(document).ready(function() {
     'use strict';
-    console.log('main.js loaded');
+    paper.install(window);
+    paper.setup(document.getElementById('mainConvas'));
+
+    var tool = new tool();
+
+    var c = Shape.Circle(200, 200, 80);
+    c.fillColor = 'black';
+    var text = new PointText(200, 200);
+    text.justification = 'center';
+    text.fontSize = 20;
+    text.content = 'hello world';
+    tool.onMouseDown = function(event) {
+        var c = Shape.Circle(event.point.x, event.point.y, 20);
+        c.fillColor = 'green';
+    }
+
+    paper.view.draw();
 });
