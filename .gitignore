@@ -3,7 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=java,linux,macos,gradle,windows,eclipse,java-web,visualstudiocode
 
 # npm 디버그 기록
-npm-debug.log*
+*.log
 
 # 프로젝트 의존성
 node_modules
