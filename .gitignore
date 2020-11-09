@@ -15,4 +15,8 @@ node_modules
 *.tmp
 *~
 
+# ES5 파일
+dist
+public/dist
+
 # End of https://www.gitignore.io/api/java,linux,macos,gradle,windows,eclipse,java-web,visualstudiocode

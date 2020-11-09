@@ -1,0 +1,27 @@
+{
+  "name": "learning-javascript",
+  "version": "1.0.0",
+  "description": "\"러닝 자바스크립트\" 개정 3판을 학습하면서, 실습한 예제들을 모아둔 저장소입니다.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hee-jin506/Learning-Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hee-jin506/Learning-Javascript/issues"
+  },
+  "homepage": "https://github.com/Hee-jin506/Learning-Javascript#readme",
+  "dependencies": {
+    "underscore": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  }
+}
