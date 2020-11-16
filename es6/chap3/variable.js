@@ -42,3 +42,187 @@ let currentTemp = 19.5;
 const message = "The current temperature is " + currentTemp + "\u00B0C";
 const message2 = `The current temperature is ${currentTemp}\u00B0C`;
 
+const multiline = "line1\n" +
+    "line2\n" +
+    "line3";
+
+const multiline2 = `Current temperature:\n`+ 
+    `\t${currentTemp}\u00b0C\n`+
+    "Don't worry... the heat is on!";
+
+const result1 = 3 + '30';
+const result2 = 3 * '30';
+
+let heating = true;
+let cooling = false;
+
+const RED = Symbol("The color of a sunset!");
+const ORANGE = Symbol("The color of a sunset!");
+RED === ORANGE // false
+
+let currentTemp; // undefined 
+const targetTemp = null; // null
+currentTemp = 19.5;
+currentTemp = undefined; // 초기화되지 않음. 권장 X
+
+const obj = {};
+
+obj.color="yellow";
+
+obj["not an identifier"] = 3;
+obj["not an identifier"]; // 3
+obj["color"]; // yellow;
+
+const SIZE = Symbol();
+obj[SIZE] = 8;
+obj[SIZE];
+
+const sam1 = {
+    name: 'Sam',
+    age: 4,
+};
+
+const sam2 = {name: 'Sam', age: 4};
+
+const sam3 = {
+    name: 'Sam',
+    classification: {        // 프로퍼티 값도 객체가 될 수 있다.
+        kingdom: 'Anamalia',
+        phylum: 'Chordata',
+        class: 'Mamalia',
+        order: 'Carnivoria',
+        family: 'Felidae',
+        subfamily: 'Felinae',
+        genus: 'Felis',
+        species: 'catus',
+    },
+};
+
+sam3.classification.family;
+sam3["classification"].family;
+sam3.classification["family"];
+sam3.classification["family"];
+sam3["classification"]["family"];
+
+sam3.speak = function(){return "Meow!";};
+sam3.speak();
+
+delete sam3.classification;
+delete sam3.speak;
+
+const s = "hello";
+s.toUpperCase();
+
+s.rating=3;
+s.rating; // undifined
+
+const a1 = [1, 2, 3, 4];
+const a2 = [1, 'two', 3, null];
+const a3 = [
+    "What the hammer? What the chain?",
+    "In What furnace was thy brain?",
+    "What the anvil? What dread grasp",
+    "Dard its deadly terrors clasp?"
+];
+const a4 = [
+    { name:"Ruby", hardness: 9 },
+    { name:"Diamond", hardness: 10 },
+    { name:"Topaz", hardness: 8 },
+];
+const a5 = [
+    [1, 3, 5],
+    [2, 4, 6],
+]
+
+const arr = ['a', 'b', 'c'];
+arr.length // 3
+
+const arr = ['a', 'b', 'c'];
+arr[0];  // 'a'
+arr[arr.length - 1]; // 'c'
+
+const arr = [1, 2, 'c', 4, 5];
+arr[2] = 3;
+
+const now = new Date();
+now; 
+
+const halloween = new Date(2016, 9, 31);
+
+const halloweenParty = new Date(2016, 9, 31, 19, 0);
+
+halloweenParty.getFullYear();     // 2016
+halloweenParty.getMonth();        // 9
+halloweenParty.getDate();         // 31
+halloweenParty.getDay();          // 1
+halloweenParty.getHours();        // 19
+halloweenParty.getMinutes();      // 0
+halloweenParty,getSeconds();      // 0
+halloweenParty.getMilliseconds(); // 0
+
+const email = /\b[a-z0-9._-]+0[a-z_-]+(?:\.[a-z]+)+\b/;
+const phone = /(:?+1)?(:?\d{3}\)\sd{3}[\s-]?)\d{3}[\s-]?\d{4}/;
+
+const numStr = "33.3";
+const num = Number(numStr); // 이 행은 숫자 값을 만들며, Number 객체의 인스턴스를 만드는 것이 아니다.
+
+const a = parseInt("16 volts", 10);
+const b = parseInt("3a", 16);
+const c = parseFloat("15.5 kph");
+
+const d = new Date();
+const ts = d.valueOf();
+
+const b = true;
+const n = b ? 1 : 0;
+
+const n = 33.5;
+n;                       // 33.5
+const s = n.toString();
+s;                       // "33.5"
+ 
+const arr = [1, true, "hello"];
+arr.toString();                   // "1,true,hello"
+
+const n = 0;
+const b1 = !!n;
+const b2 = Boolean(n);
+
+let a = 1;
+let b = a;
+a = 2;
+console.log(b)     // 1
+
+a === 2     // true
+
+function change (a) {
+    a = 5;
+}
+
+a = 3;
+change(a);
+console.log(a);    // 3  
+
+let o = {a:1};
+let p = o;
+o.a = 2;
+console.log(p);   // {a:2}
+
+let o = {a: 1};
+let p = o;
+p === o;   // true
+o = {a: 2}; 
+p === o;   // false
+console.log(p) // {a:1}
+
+let q = {a: 1};
+q === {a: 1}    // false;
+
+function change_o (o) {
+    o.a = 999;
+}
+
+let o = {a: 1};
+change_o(o);
+console.log(o)   // {a: 999}
+
